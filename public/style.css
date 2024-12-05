@@ -14,15 +14,20 @@ body {
     padding: 5px;
     display: inline-block;
     border-radius: 5px;
-    animation: crimson-back 1s 300ms;
+    animation: rotate-back-and-forth 0.5s 300ms;
+    
 }
 @keyframes crimson-back {
     30% { color:rgb(194, 143, 243); }
 }
 
 .title:hover {
-    animation: rotate-back-and-forth 0.5s;
+    animation: crimson-back 1s 300ms;
 }
+
+/* .title:hover {
+    animation: rotate-back-and-forth 0.5s;
+} */
 
 @keyframes rotate-back-and-forth {
     0% {transform: rotate(0deg);}
