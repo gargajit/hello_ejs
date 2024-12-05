@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "babel src -d lib",
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Ajit Garg",
