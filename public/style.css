@@ -22,7 +22,7 @@ body {
 }
 
 .title:hover {
-    animation: crimson-back 1s 300ms;
+    animation: crimson-back 1s;
 }
 
 /* .title:hover {
