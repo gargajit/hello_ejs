@@ -25,9 +25,6 @@ body {
     animation: crimson-back 1s;
 }
 
-/* .title:hover {
-    animation: rotate-back-and-forth 0.5s;
-} */
 
 @keyframes rotate-back-and-forth {
     0% {transform: rotate(0deg);}
@@ -40,4 +37,9 @@ body {
     color: #8b8884;
     padding: 5px;
     display: inline-block;
+}
+
+.info-list {
+    list-style-type: circle;
+    list-style-position: inside;
 }
