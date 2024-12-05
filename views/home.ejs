@@ -11,8 +11,19 @@
         Hello <%= name %>!
     </h1>
     <h2 class="secondary">It's <%= dayType %>, <%= advice %></h2>
+    <p class="secondary">
+        <%= name %>, this is a dynamic website that renders your name which you submitted in the form along with a message 
+        based on the day of the week. If you accessed this website on a weekday it will give you one message/advice whereas 
+        if you access it on a weekend (Saturday or Sunday) it will have a different message. This project uses:
+    </p> 
+    <ul class="secondary info-list">
+        <li>HTML for static form page.</li>
+        <li>CSS, that features animation on title, a background image.</li>
+        <li>Node and Express, to create the backend server, that serves the HTTP requests.</li>
+        <li>EJS, to render dynamic content, such as your name followed by the advice of the day.</li>
+    </ul>
     <div>
-        <a href="/">Go back</a>
+        <a class="secondary" href="/">Go back</a>
     </div>
 </body>
 </html>
