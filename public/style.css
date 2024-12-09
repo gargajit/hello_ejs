@@ -6,6 +6,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;   
+    color: #8b8884;
 }
 
 
@@ -14,8 +15,7 @@ body {
     padding: 5px;
     display: inline-block;
     border-radius: 5px;
-    animation: rotate-back-and-forth 0.5s 300ms;
-    
+    animation: rotate-back-and-forth 0.5s 300ms;    
 }
 @keyframes crimson-back {
     30% { color:rgb(194, 143, 243); }
@@ -25,6 +25,9 @@ body {
     animation: crimson-back 1s;
 }
 
+/* .title:hover {
+    animation: rotate-back-and-forth 0.5s;
+} */
 
 @keyframes rotate-back-and-forth {
     0% {transform: rotate(0deg);}
@@ -34,7 +37,6 @@ body {
 }
 
 .secondary {
-    color: #8b8884;
     padding: 5px;
     display: inline-block;
 }
@@ -42,4 +44,8 @@ body {
 .info-list {
     list-style-type: circle;
     list-style-position: inside;
+}
+
+a {
+    color:cadetblue;
 }
