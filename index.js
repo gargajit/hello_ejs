@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import ejs from "ejs";
 import session from "express-session";
-import RedisStore from "connect-redis";
+import * as RedisStore from "connect-redis";
 import { createClient } from "redis";
 
 import { dirname } from "path";
