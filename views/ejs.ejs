@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>EJS</title>
 </head>
 <body>
-    <h1>Embedded JavaScript Syntax</h1>
+    <h1>EJS Syntax</h1>
     <p> EJS helps us to excute JS inside the html. If the key-value pair sends a html code, EJS can also render it as well.</p>
     <h2>EJS tags</h2>
     <ul>
-       <li>Input <%%= variable %>, Output: JS Output</li>
+       <li>Input <%%= variable %>, Output: JS Output, eg: <%= name %></li>
        <li>Input <%% console.log("hello") %>, Output: JS execute, no Output will be rendered</li>
-       <li>Input <%%- &lt;b&gt; Hello &lt;/b&gt; %>, Output: Render HTML, eg: <b>Hello</b> </li>
+       <li>Input <%%- &lt;b&gt; Hello World &lt;/b&gt; %>, Output: Render HTML, eg: <%- html %> </li>
+       <li>Input <%%% extra percentage at beginning %> or  <%% extra percentage at end %%%> for commenting</li>
+
     </ul>
+    <div>
+        <a class="secondary" href="/home">Go back</a>
+    </div>
 </body>
 </html>
