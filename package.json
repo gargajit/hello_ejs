@@ -11,13 +11,13 @@
   "keywords": [],
   "author": "Ajit Garg",
   "license": "ISC",
-  "description": "",
+  "description": "A backend project hosted on Render",
   "dependencies": {
     "body-parser": "^1.20.3",
+    "connect-redis": "^8.0.1",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
     "express-session": "^1.18.1",
-    "connect-redis": "^8.0.1",
     "ioredis": "^5.4.1"
   }
 }
