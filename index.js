@@ -2,12 +2,13 @@ import express from "express";
 import bodyParser from "body-parser";
 import ejs from "ejs";
 import session from "express-session";
-import * as RedisStore from "connect-redis";
+import * as connectRedis from "connect-redis";
 import { createClient } from "redis";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const RedisStore = connectRedis.default;
 
 const app = express();
 const port = 3000;
