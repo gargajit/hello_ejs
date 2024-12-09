@@ -2,13 +2,12 @@ import express from "express";
 import bodyParser from "body-parser";
 import ejs from "ejs";
 import session from "express-session";
-import * as connectRedis from "connect-redis";
+import connectRedis from "connect-redis";
 import { createClient } from "redis";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const RedisStore = connectRedis.default;
 
 const app = express();
 const port = 3000;
@@ -18,7 +17,13 @@ const redisClient = createClient({
   url: process.env.REDIS_URL  || "redis://localhost:6379",
 });
 
-redisClient.connect().catch(console.error);
+redisClient.on("error", (err) => console.log("Redis Client Error", err));
+
+// Connect to Redis
+await redisClient.connect();
+
+// Initialize Redis Store
+const RedisStore = connectRedis(session);
 
 // body parser middleware
 app.use(bodyParser.urlencoded( { extended: true }));
@@ -31,11 +36,8 @@ app.use(
         store: new RedisStore({ client: redisClient }),
         secret: "hard1coded1bad1key1for1example123",
         resave: false,
-        saveUninitialized: true,
-        cookie: {
-            secure: process.env.NODE_ENV === "production",
-            maxAge: 1000 * 60 * 60 * 24, //1 day
-        },
+        saveUninitialized: false,
+        cookie: { secure: false },
     })
 );
 
