@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import ejs from "ejs";
 import session from "express-session";
-import connectRedis from "connect-redis";
+import * as connectRedis from "connect-redis";
 import { createClient } from "redis";
 
 import { dirname } from "path";
@@ -11,6 +11,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
+
+// Initialize Redis Store
+const RedisStore = connectRedis.default;
 
 // Create a Redis client
 const redisClient = createClient({
@@ -22,8 +25,7 @@ redisClient.on("error", (err) => console.log("Redis Client Error", err));
 // Connect to Redis
 await redisClient.connect();
 
-// Initialize Redis Store
-const RedisStore = connectRedis(session);
+
 
 // body parser middleware
 app.use(bodyParser.urlencoded( { extended: true }));
