@@ -2,6 +2,7 @@
   "name": "hello_ejs",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "type": "module",
   "scripts": {
     "build": "babel src -d lib",
