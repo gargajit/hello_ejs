@@ -23,7 +23,7 @@ redisClient.connect().catch(console.error);
 // body parser middleware
 app.use(bodyParser.urlencoded( { extended: true }));
 
-// Static Middleware
+// Middleware to access static files
 app.use(express.static("public"));
 
 app.use(
