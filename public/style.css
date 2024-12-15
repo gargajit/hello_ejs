@@ -70,10 +70,10 @@ label {
     color: #c28ff3;
 }
 
-/* .name-input:not(:placeholder-shown) + label {
+.name-input:not(:placeholder-shown) + label {
     transform: translateY(-25px);
     color: #c28ff3;
-} */
+}
 
 .name-input:focus {
     border: 1px solid #c28ff3;
