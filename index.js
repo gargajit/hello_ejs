@@ -13,11 +13,11 @@ const app = express();
 const port = 3000;
 
 // Create a Redis client
-const redisClient = createClient({
-  url: process.env.REDIS_URL  || "redis://localhost:6379",
-});
+// const redisClient = createClient({
+//   url: process.env.REDIS_URL  || "redis://localhost:6379",
+// });
 
-redisClient.connect().catch(console.error);
+// redisClient.connect().catch(console.error);
 
 
 // body parser middleware
@@ -28,11 +28,11 @@ app.use(express.static("public"));
 
 app.use(
     session({
-        store: new RedisStore({ client: redisClient }),
+        // store: new RedisStore({ client: redisClient }),
         secret: "hard1coded1bad1key1for1example123",
         resave: false,
         saveUninitialized: false,
-        cookie: { secure: true },
+        // cookie: { secure: true },
     })
 );
 
