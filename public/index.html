@@ -9,8 +9,10 @@
 <body>
     <h1 class="title">Greetings!!!</h1>
     <form action="/home" method="post">
-        <label for="name" class="secondary"><b>Enter your first name:</b></label>
-        <input type="text" name="name" required>
+        <div class="form-group">
+            <input class="name-input" type="text" name="name" required>
+            <label for="name" class="secondary">Enter your name</label>
+        </div>
         <input type="submit" value="Submit">
     </form>    
 </body>
