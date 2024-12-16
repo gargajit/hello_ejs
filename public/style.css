@@ -92,3 +92,8 @@ a {
 h2 {
     margin-top: 0;
 }
+
+.btn:active {
+    background-color: cadetblue;
+    color: white;
+}
