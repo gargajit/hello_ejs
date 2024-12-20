@@ -31,8 +31,8 @@ body {
 
 @keyframes rotate-back-and-forth {
     0% {transform: rotate(0deg);}
-    30% {transform: rotate(20deg);}
-    70% {transform: rotate(-20deg);}
+    30% {transform: rotate(20deg); color:#c28ff3;}
+    70% {transform: rotate(-20deg); color:#c28ff3;}
     100% {transform: rotate(0deg);}
 }
 
