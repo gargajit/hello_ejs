@@ -71,7 +71,7 @@ label {
 }
 
 .name-input:not(:placeholder-shown) + label {
-    transform: translateY(-25px);
+    transform: translateY(-30px);
     color: #c28ff3;
 }
 
